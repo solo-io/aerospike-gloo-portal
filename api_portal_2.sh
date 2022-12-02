@@ -25,6 +25,7 @@ spec:
   # you need to include a domain in this format: <DOMAIN>:<INGRESS_PORT> as we do below
   - petstore.example.com:8080
   - petstore.example.com
+  - petstore.example.com:31500
 
   # This will include all API product of the environment in the portal
   publishedEnvironments:

@@ -33,6 +33,10 @@ data:
     pulsar-connector                 true
     raf-realtime-analysis-framework  true
     spark-connector                  true
+    ----- SIGNATURE ------------------------------------------------
+    MEUCIQC11wp213RG0JnWi19Qnm5XqNsNcQqISrM9d579uagFDAIgb9H84EmMQQko
+    ucRl0mGgOYoxzPmY6OS8EIq381mBE8Ak
+    ----- END OF SIGNATURE -----------------------------------------
 
 kind: ConfigMap
 metadata:
@@ -71,7 +75,9 @@ spec:
           - name: FEATURE_KEY_FILE
             value: "/opt/aerospike/etc/features.conf"
           - name: NAMESPACE
-            value: solo-namespace
+            value: aerogloo
+          - name: NSUP_PERIOD
+            value: "5"
       volumes:
         - name: features
           configMap:

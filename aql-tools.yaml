@@ -8,4 +8,7 @@ spec:
   containers:
     - name: aerospike-tools
       image: aerospike/aerospike-tools:latest
+      command:
+        - sleep
+        - "3600"
 

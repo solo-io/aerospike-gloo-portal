@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Install the apache2-utils if you don't already have them
-sudo apt install apache2-utils -y
+apt install apache2-utils -y
 
 # Generate the bcrypt hash with cost of 10
 pass=$(htpasswd -bnBC 10 "" mysecurepassword | tr -d ':\n')

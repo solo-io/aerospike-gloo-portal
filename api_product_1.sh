@@ -103,6 +103,7 @@ spec:
   # you need to include a domain in this format: <DOMAIN>:<PORT>.
   - api.example.com
   - api.example.com:8080
+  - api.example.com:31500
   displayInfo:
     description: This environment is meant for developers to deploy and test their APIs.
     displayName: Development
