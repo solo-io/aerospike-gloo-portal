@@ -1,5 +1,3 @@
-gloo-fed:
-  enabled: false
 gloo:
   gatewayProxies:
     gatewayProxy:
@@ -14,3 +12,17 @@ gloo:
                   %RESPONSE_CODE% %RESPONSE_FLAGS% %BYTES_RECEIVED% %BYTES_SENT% %DURATION%
                   %RESP(X-ENVOY-UPSTREAM-SERVICE-TIME)% "%REQ(X-FORWARDED-FOR)%" "%REQ(USER-AGENT)%"
                   "%REQ(X-REQUEST-ID)%" "%REQ(:AUTHORITY)%" "%UPSTREAM_HOST%"
+global:
+  extensions:
+    rateLimit:
+      deployment:
+        aerospike:
+          address: aerospike.gloo-system.svc.cluster.local
+          namespace: aerogloo
+          port: 3000
+    glooRedis:
+      enableAcl: false
+gloo-fed:
+  enabled: false
+  glooFedApiserver:
+    enable: false

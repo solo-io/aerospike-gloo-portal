@@ -12,7 +12,7 @@
 context=$1
 
 #GLOO_VERSION=v1.10.1
-export GLOO_VERSION="v1.13.0-beta9"
+export GLOO_VERSION="v1.13.0-rc3"
 export GLOO_CLI_VERSION='v1.12.30'
 echo $GLOO_VERSION
 
